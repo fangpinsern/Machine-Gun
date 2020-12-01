@@ -1,0 +1,16 @@
+{
+  "name": "machine-gun",
+  "version": "1.0.0",
+  "description": "Load tester for http requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Pin Sern",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "yargs": "^16.1.1"
+  }
+}
