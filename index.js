@@ -9,6 +9,7 @@ const {
   AUTH_URL,
   TEST_URL,
   TEST_TYPE,
+  THRESHOLD,
 } = require("./config");
 
 const parent = async () => {
@@ -59,15 +60,19 @@ const parent = async () => {
 
   responses = await Promise.all(responses);
 
-  if (responses.filter(Boolean).length == responses.length) {
-    console.log(times);
+  if (responses.filter((response) => response).length === NO_OF_PROCESSES) {
     const sum = times.reduce((a, b) => a + b, 0);
     const avg = sum / times.length || 0;
     console.log(`average: ${avg}`);
-    console.log("success!");
-  } else {
-    console.log("failures!");
+    if (avg > THRESHOLD) {
+      console.log(
+        `Average is greater that given threshold of ${THRESHOLD}ms. \nConsider optimizing this URL request`
+      );
+    }
+    console.log("Success!");
+    return;
   }
+  console.log("Failures!");
 };
 
 parent();

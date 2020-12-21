@@ -8,4 +8,5 @@ module.exports = {
   TEST_URL: "https://google.com", // String - load tested URL
   TEST_TYPE: "GET", // [GET, POST, PUT, DELETE] - Load test request type (Default to GET)
   NO_OF_PROCESSES: 1, // Number <Integer, Positive> - Number of request sent at 1 go.
+  THRESHOLD: 1000, // Number <Integer, Positive> - Amount of time given for the request to return a result
 };
