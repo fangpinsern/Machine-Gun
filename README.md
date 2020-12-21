@@ -12,12 +12,13 @@ DDOS attack if a server is not well protected.
 
 ## What is in the config?
 
-| Keys                                | type    | description                                                    |
-| ----------------------------------- | ------- | -------------------------------------------------------------- |
-| AUTH                                | Boolean | If authentication is required, set to true                     |
-| AUTH_EMAIL, AUTH_PASSWORD, AUTH_URL | String  | Only required when AUTH is true                                |
-| TEST_URL                            | String  | URL that you want to stress test.                              |
-| NO_OF_PROCESSES                     | Number  | Number on "concurrent" users you want to load the service with |
+| Keys                                | type    | description                                                                          |
+| ----------------------------------- | ------- | ------------------------------------------------------------------------------------ |
+| AUTH                                | Boolean | If authentication is required, set to true                                           |
+| AUTH_EMAIL, AUTH_PASSWORD, AUTH_URL | String  | Only required when AUTH is true                                                      |
+| TEST_URL                            | String  | URL that you want to stress test.                                                    |
+| NO_OF_PROCESSES                     | Number  | Number on "concurrent" users you want to load the service with                       |
+| THRESHOLD                           | Number  | Amount of time given for the request to return a result to be considered successfule |
 
 ---
 
